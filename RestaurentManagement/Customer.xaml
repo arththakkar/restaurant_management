@@ -1,4 +1,4 @@
-﻿<Page x:Class="RestaurentManagement.Menu"
+﻿<Page x:Class="RestaurentManagement.Customer"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:RestaurentManagement"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Menu">
+      Title="Customer">
 
     <Grid>
         <Grid.Background>
@@ -25,13 +25,12 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <Label Content="Manage Menu" FontSize="30" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Foreground="#FFFFFF" />
+        <Label Content="Manage Customer" FontSize="30" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Foreground="#FFFFFF" />
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Name="StackPanel1" VerticalAlignment="Top"  Margin="10,10,10,0">
-            <Grid Background="#FF93C0C7">
-                <Button x:Name="btn_menu" Click="btn_menu_Click" Background="#FF93C0C7" Foreground="Black" Height="60" BorderThickness="0" HorizontalAlignment="Stretch">
+            <Grid Background="#FFE7DAE8">
+                <Button x:Name="btn_menu" Click="btn_menu_Click" Background="#FFE7DAE8" Foreground="Black" Height="60" BorderThickness="0" HorizontalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal">
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -48,8 +47,8 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" Name="StackPanel2" VerticalAlignment="Top"  Margin="10,10,10,0">
-            <Grid Background="#FFE7DAE8">
-                <Button x:Name="btn_customers" Click="btn_customers_Click" Background="#FFE7DAE8" Foreground="Black" Height="60" BorderThickness="0" HorizontalAlignment="Stretch">
+            <Grid Background="#FF93C0C7">
+                <Button x:Name="btn_customers" Click="btn_customers_Click" Background="#FF93C0C7" Foreground="Black" Height="60" BorderThickness="0" HorizontalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal">
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -101,28 +100,9 @@
             </Grid>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Name="StackPanel5" VerticalAlignment="Bottom"  Margin="10,10,10,0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="auto"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Label Content="Menu Category" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Foreground="White"/>
-                <TextBox x:Name="txt_menu_category" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" Grid.Row="0"/>
-                <Button x:Name="btn_add_category" Click="btn_add_category_Click" Content="Add Category" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="100" Grid.Column="1" Grid.Row="2" Margin="0,10,0,0" Background="#FF7FD4AD" Foreground="White"/>
+        
 
-            </Grid>
-        </StackPanel>
-        <StackPanel Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Name="StackPanel6" VerticalAlignment="Bottom"  Margin="10,10,10,0">
-            <DataGrid x:Name="dt_menu_category" Grid.Column="0" Grid.Row="0" VerticalAlignment="bottom" HorizontalGridLinesBrush="Black" AlternatingRowBackground="#FF7FD4AD"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" Name="StackPanel7" VerticalAlignment="Bottom"  Margin="10,10,10,0">
+        <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Name="StackPanel7" VerticalAlignment="Bottom"  Margin="10,10,10,0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100"></ColumnDefinition>
@@ -133,21 +113,37 @@
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Label Content="Menu Category" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Foreground="White"/>
-                <ComboBox x:Name="cmb_menu_category" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0" Width="160" Height="26" />
-                
-                <Label Content="Menu Item" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Foreground="White"/>
-                <TextBox x:Name="txt_menu_item" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" Grid.Row="1" Margin="0,10,0,0"/>
-                <Button x:Name="btn_add_item" Click="btn_add_item_Click" Content="Add Item" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="100" Grid.Column="1" Grid.Row="2" Margin="0,10,0,0" Background="#FF7FD4AD" Foreground="White"/>
-                
+                <Label Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Foreground="White"/>
+                <TextBox x:Name="txt_first_name" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" Grid.Row="0" Margin="0,10,0,0"/>
 
+                <Label Content="Last Name" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Foreground="White"/>
+                <TextBox x:Name="txt_last_name" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" Grid.Row="1" Margin="0,10,0,0"/>
+
+                <Label Content="Mobile" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" Foreground="White"/>
+                <TextBox x:Name="txt_mobile" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" Grid.Row="2" Margin="0,10,0,0"/>
+
+                <Label Content="Address" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" Foreground="White"/>
+                <TextBox x:Name="txt_address" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" Grid.Row="3" Margin="0,10,0,0"/>
+
+                <Label Content="City" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" Foreground="White"/>
+                <TextBox x:Name="txt_city" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" Grid.Row="4" Margin="0,10,0,0"/>
+
+                <Label Content="Postal Code" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" Foreground="White"/>
+                <TextBox x:Name="txt_postal_code" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Grid.Column="1" Grid.Row="5" Margin="0,10,0,0"/>
+
+
+                <Button x:Name="btn_add_item" Click="btn_add_item_Click" Content="Add Customer" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="100" Grid.Column="1" Grid.Row="6" Margin="0,10,0,0" Background="#FF7FD4AD" Foreground="White"/>
             </Grid>
         </StackPanel>
 
-        <StackPanel Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Name="StackPanel8" VerticalAlignment="Bottom"  Margin="10,10,10,0">
-            <DataGrid x:Name="dt_menu_items" Grid.Column="0" Grid.Row="0" VerticalAlignment="bottom" HorizontalGridLinesBrush="Black" AlternatingRowBackground="#FF7FD4AD"/>
+        <StackPanel Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Name="StackPanel8" VerticalAlignment="Bottom"  Margin="10,10,10,0">
+            <DataGrid x:Name="dt_customer" Grid.Column="0" Grid.Row="0" VerticalAlignment="bottom" HorizontalGridLinesBrush="Black" AlternatingRowBackground="#FF7FD4AD"/>
         </StackPanel>
     </Grid>
 </Page>

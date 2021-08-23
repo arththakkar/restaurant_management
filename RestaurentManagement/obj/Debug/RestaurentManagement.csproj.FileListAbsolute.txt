@@ -17,3 +17,5 @@ E:\CS\repos\RestaurentManagement\RestaurentManagement\obj\Debug\RestaurentManage
 E:\CS\repos\RestaurentManagement\RestaurentManagement\obj\Debug\Menu.g.cs
 E:\CS\repos\RestaurentManagement\RestaurentManagement\obj\Debug\Menu.baml
 E:\CS\repos\RestaurentManagement\RestaurentManagement\obj\Debug\RestaurentManagement.csproj.AssemblyReference.cache
+E:\CS\repos\RestaurentManagement\RestaurentManagement\obj\Debug\Customer.g.cs
+E:\CS\repos\RestaurentManagement\RestaurentManagement\obj\Debug\Customer.baml

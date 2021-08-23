@@ -127,5 +127,15 @@ namespace RestaurentManagement
                 return true;
             }
         }
+
+        private void btn_customers_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Customer());
+        }
+
+        private void btn_menu_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Menu());
+        }
     }
 }
